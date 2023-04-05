@@ -1,33 +1,44 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html>
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta charset="utf-8">
-<title>Использование flex при построении колонок</title>
-<style>
-    div {
-    display:flex;
-    flex-direction: row   
+<title>Использование flex при построении колонок  </title>
+<style type="text/css">
+    div{
+        display: flex;
+        flex-direction:column;
+        flex-wrap: nowrap;
+        justify-content: center;
+
+        
+
     }
-	#left{
-    float:left;    
-    width: 200px;
+#left{
 	background:#ccf;
-	}
-	#right{
-    float:right; 
     width: 200px;
+
+}
+#right{
 	background:#fcc;
-	}
-	#center{
-    margin-left: 341px;
-    width: 600px;
+    width:200px;
+
+
+
+}
+#center{
 	background:#cfc;
-	}
+    width: 600px;
+
+
+    
+
+}
 </style>
 </head>
 <body>
 	<div id="left">left<br>left<br>left<br>left<br>left</div>
-	<div id="right">right<br>right<br>right<br>right</div>
 	<div id="center">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
+    <div id="right">right<br>right<br>right<br>right</div>
 </body>
 </html>
