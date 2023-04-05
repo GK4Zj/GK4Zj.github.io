@@ -1,32 +1,38 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html>
 <head>
 <meta charset="utf-8">
-<title>Использование inline-block при построении колонок</title>
-<style>
-    div {
-    display:inline-block;
+<title>Использование display inlineblock при построении колонок  </title>
+<style type="text/css">
+    div{
+        display: inline-block;
     }
-	#left{
-    width: 200px;
+#left{
 	background:#ccf;
-    float: left;
-	}
-	#right{
+align-items: left;
     width: 200px;
+
+}
+#right{
 	background:#fcc;
-    float: right;
-	}
-	#center{
-    margin-left: 218px;
-    width: 600px;
+    align-items:end;
+    width:200px;
+
+
+}
+#center{
 	background:#cfc;
-	}
+    width: 600px;
+    text-align: center;
+    ;
+
+    
+}
 </style>
 </head>
 <body>
 	<div id="left">left<br>left<br>left<br>left<br>left</div>
-	<div id="right">right<br>right<br>right<br>right</div>
 	<div id="center">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
+    <div id="right">right<br>right<br>right<br>right</div>
 </body>
 </html>
