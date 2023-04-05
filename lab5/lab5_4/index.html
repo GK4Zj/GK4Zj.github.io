@@ -2,23 +2,24 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<title>Использование inline-block при построении колонок</title>
+<title>Использование flex при построении колонок</title>
 <style>
     div {
-    display:inline-block;
+    display:flex;
+    flex-direction: row   
     }
 	#left{
+    float:left;    
     width: 200px;
 	background:#ccf;
-    float: left;
 	}
 	#right{
+    float:right; 
     width: 200px;
 	background:#fcc;
-    float: right;
 	}
 	#center{
-    margin-left: 218px;
+    margin-left: 341px;
     width: 600px;
 	background:#cfc;
 	}
