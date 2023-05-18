@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+	<link type="image/x-icon" rel="shortcut icon" href="/favicon.svg">
 	<meta charset="UTF-8">
 	<title>Использование iframe</title>
 	<style>
+           figure {
+                margin-bottom: 0;
+    text-align: center; /* Выравнивание по центру */
+   }
 		.tag {
 		    color: navy;
 		}
@@ -12,20 +17,18 @@
 		}
 	</style>
 </head>
-<body style="background-color: black;color:white;">
+<body>
 <h1>Добавление встроенных фреймов</h1>
 <p>Один из способов добавления содержимого на страницу — это внедрить другую HTML-страницу в текущую. Это делается с помощью встроенного фрейма или элемента <span class="tag">&lt;iframe&gt;</span>. Данный элемент принимает URL другой HTML-страницы в значении атрибута <span class="attribute">src</span>&nbsp;— это вызывает содержимое из внедрённой HTML-страницы для отображения на текущей странице. Значение атрибута <span class="attribute">src</span> может быть URL относительно страницы, где появляется элемент <span class="tag">&lt;iframe&gt;</span> или абсолютным адресом для исключительно внешней страницы.</p><p>Многие страницы используют элемент <span class="tag">&lt;iframe&gt;</span> для внедрения медиа-контента на страницу с внешнего сайта, вроде Google Maps, YouTube и др.</p>
-
 <h2>Демонстрация добавления встроенного фрейма</h2>
 <figure>
-<iframe width="800" height="600" src="https://www.youtube.com/embed/t6NIAlyQ15k" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<figcaption>Физико-математический факультет</figcaption>
+	<iframe src="https://www.youtube.com/embed/t6NIAlyQ15k" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" height="315" width="560"></iframe>	
+	<figcaption>Физико-математический факультет</figcaption>
 </figure>
-<figure>
-<iframe src="https://yandex.ru/map-widget/v1/?feedback=map%2Fedit&feedback-context=map.controls&ll=36.068006%2C52.970734&z=12" width="800" height="600" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-<figcaption>Орловский Государственный Университет имени И.С. Тургенева</figcaption>
-</figure>
-
-
+    <br>
+	<figure><iframe src="https://yandex.ru/maps/10/orel/?from=api-maps&amp;ll=36.063909%2C52.951255&amp;mode=search&amp;oid=1030860442&amp;ol=biz&amp;utm_source=api-maps&amp;z=17" width="600" height="600">
+	</iframe>
+		<figcaption>ФГБОУ ВО Орловский государственный университет имени И. С. Тургенева</figcaption>
+	</figure>
 </body>
 </html>
