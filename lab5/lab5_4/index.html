@@ -1,34 +1,36 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link type="image/x-icon" rel="shortcut icon" href="/favicon.svg">
 <meta charset="utf-8">
-<title>Использование flex при построении колонок  </title>
-<style type="text/css">
-    div{
-        display: flex;
-        flex-direction:column;
-        flex-wrap: nowrap;
-        justify-content: center;
+<title>Использование flex при построении колонок</title>
+<style>
+ body{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px calc(1rem - 1px);
     }
-#left{
-	background:#ccf;
+	#left{
     width: 200px;
-
-}
-#right{
+	background:#ccf;
+    order: -1;
+	}
+	#right{
+    width: 200px;
 	background:#fcc;
-    width:200px;
-}
-#center{
-	background:#cfc;
+    order: 1;
+	}
+	#center{
     width: 600px;
-}
+	background:#cfc;
+    order: 0;
+	}
 </style>
 </head>
 <body>
 	<div id="left">left<br>left<br>left<br>left<br>left</div>
+	<div id="right">right<br>right<br>right<br>right</div>
 	<div id="center">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
-    <div id="right">right<br>right<br>right<br>right</div>
 </body>
 </html>
