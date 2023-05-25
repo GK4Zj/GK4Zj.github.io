@@ -4,78 +4,93 @@
 <meta charset="utf-8">
 <title>Таблицы</title>
 <style>
-table {
+table.one {
 	width: 200px;
 	border: 1px solid gray;
 	margin: 20px;
 	float: left;
 }
-td, th {
-	border: 1px solid black;
+td.one, th.one {
+	border: 1px solid gray;
 	padding: 30px;
 }
 </style>
 </head>
-<body style="background-color: white;color: black;">
-	<table>
+<body>
+	<table><tbody><tr><td><table class="one">
+      
 		<caption>1-я таблица</caption>
-		<tbody>
-		<tr>
-			<td rowspan="2">1</td>
-			<td colspan="2">2</td>
-
-		</tr>
-		<tr>
-			<td>5</td>
-			<td>6</td>
-		</tr>
-		</tbody>
+		<tbody><tr>
+<th class="one" rowspan="2">1
+</th>
+<td class="one" colspan="2">2
+</td>
+    </tr>
+    <tr>
+<td class="one">5
+</td>
+<td class="one">6
+</td>
+</tr>
+</tbody>
 	</table>
-
-	<table>
+</td><td><table class="one">
 		<caption>2-я таблица</caption>
 		<tbody>
 		<tr>
-			<td colspan="2">1</td>
+			<th colspan="2" class="one">1</th>
+			
 		</tr>
 		<tr>
-			<td rowspan="2">3</td>
-			<td>4</td>
+			<td rowspan="2" class="one">3</td>
+			<td class="one">4</td>
 		</tr>
 		<tr>
-			<td>6</td>
+			<td class="one">6</td>
+			
 		</tr>
 		</tbody>
 	</table>
-	<table>
+	
+</td></tr><tr><td>
+	<table class="one">
 		<caption>3-я таблица</caption>
 		<tbody>
 		<tr>
-			<td>1</td>
-			<td rowspan="2">2</td>
+			<td class="one">1</td>
+			
+		<td rowspan="2" class="one">2</td></tr>
+		<tr>
+			<td class="one">3</td>
+			
 		</tr>
 		<tr>
-			<td>3</td>
-		</tr>
-		<tr>
-			<td colspan="2">5</td>
+			<td colspan="2" class="one">5</td>
+			
 		</tr>
 		</tbody>
 	</table>
-    <table>
+
+	
+</td><td>
+	
+
+	<table class="one">
 		<caption>4-я таблица</caption>
 		<tbody>
 		<tr>
-			<td colspan="2">1</td>
+			<th colspan="2" class="one">1</th>
+			
 		</tr>
 		<tr>
-			<td>3</td>
-			<td>4</td>
+			<td class="one">3</td>
+			<td class="one">4</td>
 		</tr>
 		<tr>
-			<td colspan="2">5</td>
+			<td colspan="2" class="one">5</td>
+			
 		</tr>
 		</tbody>
 	</table>
-</body>
-</html>
+</td></tr></tbody></table>
+</body></html>
