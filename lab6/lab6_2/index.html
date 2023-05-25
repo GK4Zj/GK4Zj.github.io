@@ -1,9 +1,12 @@
 <!doctype html>
 <html lang="ru">
 <head>
+
 <meta charset="utf-8">
 <title>Главная страница</title>
+
 <style>
+
 
 * {
 			margin: 0;
@@ -17,34 +20,25 @@
 ul {    margin: 10px 0px 0px 0px;
         list-style: none;
     }
-    li:before {
-        left: 40px;
-        width: 4px;
-        content: url(/images/plus.gif);
-        height: 14px;
-        width: 15px;
-        position: absolute;
-			}
+
     li a {    margin: 15px 0px 0px 39px;
         color: #5578A1;
     }
     #container {
-display: flex;
+    display: flex;
     flex-direction: column;
     width: 803px;
     min-height: 100%;
     margin: 7px 0px 0px 23px;
-
+  margin-left: auto;
+  margin-right: auto;
     }
     #header {
  
     height: 80px;
     background: #CCDDEE;
     }
-    #outer {
-	flex: 1 0 auto;
-    height: 190px;
-    }
+
 
     #left {
     width: 200px;
@@ -63,15 +57,21 @@ display: flex;
     #center {
     margin: 11px 10px 0px 10px;
     }
+
+    #outer {
+    flex: 1 0 auto;
+    height: calc(100% - 280px);
+    }
+
     #footer {
-flex: 0 0 auto;
-    margin-top: 15px;
-    height: 100px;
-    background: #DDCCEE;}
+    flex: 0 0 auto;
+    margin-top: auto;
+    height:100px;
+    background:#DDCCEE;}
     .clearfix::after {
-    content: "";
-    clear: both;
-	flex: 0 0 auto;
+    content:"";
+    clear:both;
+    flex:none;
     }
 </style>
 </head>
