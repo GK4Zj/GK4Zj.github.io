@@ -1,36 +1,124 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Да</title>
+  <head>
+    <script src="js/1.js">
+    </script>
+<style>
+body{
+    display: grid;
+    grid-template-columns: [one] 220px [two] 300px;
+    grid-template-rows: 1fr;
+    column-gap: 10px;
+}
+#h1{    
+    padding-bottom: 43px;
+}
+.h{
+    font-size: 30px;
+    padding: 10px 10px 10px 10px;   
+}
+#WEB{
+    padding: 10px 10px 10px 10px;
+	  background:#ccf;
+    width: 200px;
+    grid-column-start: 1;
+    grid-column-end: two;      
+}
+#JS{
+    padding: 10px 10px 10px 10px;
+	background:#cfc;
+    width: 200px;
+    grid-column-start: two;
+    grid-column-end: three;   
+}
+</style>
+  <meta charset="utf-8">
+  <title>Герасин Владислав 11ПИфм</title>
 </head>
 <body>
-    <h1>Лабораторные работы</h1>
-    <hr>
+<div id="WEB"><div id="h" class="h">Разработка и дизайн веб-сайтов</div>
+<details>
+ <summary>Лабораторная работа №1</summary>
     <p><a href="lab1/lab1_1/index.html">Лабораторная работа 1.1</a></p>
     <p><a href="lab1/lab1_2/index.html">Лабораторная работа 1.2</a></p>
     <p><a href="lab1/lab1_3/index.html">Лабораторная работа 1.3</a></p>
     <p><a href="lab1/lab1_4/index.html">Лабораторная работа 1.4</a></p>
     <p><a href="lab1/lab1_5/index.html">Лабораторная работа 1.5</a></p>
+</details>
+<details>
+ <summary>Лабораторная работа №2</summary>
     <p><a href="lab2/lab2_1/index.html">Лабораторная работа 2.1</a></p>
     <p><a href="lab2/lab2_2/index.html">Лабораторная работа 2.2</a></p>
     <p><a href="lab2/lab2_3/index.html">Лабораторная работа 2.3</a></p>
     <p><a href="lab2/lab2_4/index.html">Лабораторная работа 2.4</a></p>
     <p><a href="lab2/lab2_5/index.html">Лабораторная работа 2.5</a></p>
-    <p><a href="lab3/lab3_1/index.html">Лабораторная работа 3.1</a></p>
-    <p><a href="lab3/lab3_2/index.html">Лабораторная работа 3.2</a></p>
+</details>
+<details>
+ <summary>Лабораторная работа №3</summary>
+  <p><a href="lab3/lab3_1/index.html">Лабораторная работа 3.1</a></p>
+  <p><a href="lab3/lab3_2/index.html">Лабораторная работа 3.2</a></p>
+</details>
+<details>
+ <summary>Лабораторная работа №4</summary>
     <p><a href="lab4/lab4_1/index.html">Лабораторная работа 4.1</a></p>
     <p><a href="lab4/lab4_2/index.html">Лабораторная работа 4.2</a></p>
     <p><a href="lab4/lab4_2_2/index.html">Лабораторная работа 4.2(2 часть)</a></p>
+</details>
+<details>
+  <summary>Лабораторная работа №5</summary>
     <p><a href="lab5/lab5_1/index.html">Лабораторная работа 5.1</a></p>
     <p><a href="lab5/lab5_2/index.html">Лабораторная работа 5.2</a></p>
     <p><a href="lab5/lab5_3/index.html">Лабораторная работа 5.3</a></p>
     <p><a href="lab5/lab5_4/index.html">Лабораторная работа 5.4</a></p>
     <p><a href="lab5/lab5_5/index.html">Лабораторная работа 5.5</a></p>
+ </details>
+ <details>
+  <summary>Лабораторная работа №6</summary>
     <p><a href="lab6/lab6_1/index.html">Лабораторная работа 6.1</a></p>
     <p><a href="lab6/lab6_2/index.html">Лабораторная работа 6.2</a></p>
-    <p><a href="lab7/index.html">Лабораторная работа 7</a></p>
+ </details>
+ <details>
+  <summary>Лабораторная работа №7</summary>
+   <p><a href="lab7/index.html">Лабораторная работа 7</a></p>
+ </details>
+</div>
+
+<div id="JS">
+  <div id="h1" class="h">Язык JavaScript</div>
+  <details>
+    <summary>Лабораторная работа №1</summary>
+     <p><button id="button" onclick="vozrast_pol();">Возраст и пол</button></p>
+     <p><button id="button" onclick="crow();">Вороны</button></p>
+     <p><button id="button" onclick="hundred();">100</button></p>
+     <p><button id="button" onclick="simple();">Простые числа</button></p>
+     <p><button id="button" onclick="catdog()">Собаки и кошки</button></p>
+   </details>
+   
+    <details>
+    <summary>Лабораторная работа №2</summary>
+    <p><a href="js/lb_2/lab1.html">Функции
+    </a></p>
+    </details>
+    <details>
+    <summary>Лабораторная работа №3</summary>
+    <p><a href="js/lb_3/lab1.html">Числа, строки и массивы</a></p>
+    </details>
+    <details>
+    <summary>Лабораторная работа №4</summary>
+    <p><a href="js/lb_3/lab1.html"></a><a href="js/lb_4/lab1.html">Объекты, дата и время</a></p>
+    </details>
+    <details>
+    <summary>Лабораторная работа №5</summary>
+    <p><a href="js/lb_5/lab5_1.html">head, ul, li</a></p>
+    <p><a href="js/lb_5/lab5_2.html">Шахматная доска</a></p>
+    <p><a href="js/lb_5/lab5_3.html">Дерево из элементов ul/li</a></p>
+    </details>
+    <details>
+    <summary>Лабораторная работа №6</summary>
+    <p><a href="js/lb_6/lab6_1.html">Кнопка</a></p>
+    <p><a href="js/lb_6/lab6_2.html">Меню</a></p>
+    <p><a href="js/lb_6/lab6_3.html">Сообщение</a></p>
+    </details>
+  </div>
 </body>
 </html>
