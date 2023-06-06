@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Text</title>
+</head>
+<body>
+	<input type="button" id="hider" value="Спрятать текст">
+
+	<div id="text">Текст</div>
+
+	<script>
+    let hider = document.getElementById('hider'); //находим элементы кнопки и текста пео id
+    let text = document.getElementById('text');
+
+hider.onclick = function() {
+  if (text.style.display === 'none') {//если оно равно `'none'`, то мы меняем на `'block'`, а значение на кнопке меняем на `'Спрятать текст'
+    text.style.display = 'block';
+    hider.value = 'Спрятать текст';
+  } else {//иначе мы меняем на `'none'` и `'Показать текст'` соответственно
+    text.style.display = 'none';
+    hider.value = 'Показать текст';
+  }
+};
+	</script>
+</body>
+</html>
