@@ -89,13 +89,25 @@ export function fibs(n) {
   }
   return arr;
 }
+
+/**
+ * принимает неупорядоченный массив чисел arr и возвращает массив из тех же элементов
+ * @param {array} arr - Исходный массив.
+ * @returns {array} sortedArr - Отсортированный массив.
+ */
+
 export function arrReverseSorted(arr) {
-  let sortedArr = arr.slice().sort((a, b) => b - a);
+  const sortedArr = arr.slice().sort((a, b) => b - a);
   
   return sortedArr;
 }
+
+/**
+ * вернёт массив уникальных, не повторяющихся значений массива arr
+ * @param {array} arr - массив, который нужно обработать
+ * @returns {array} - массив с уникальными значениями
+ */
+
 export function unique(arr) {
-  let set = new Set(arr);
-  
-  return Array.from(set);
+  return Array.from(new Set(arr));
 }
