@@ -1,60 +1,101 @@
 "use strict";
-
-function pow(x, n) {
-    if (n === 0) {
-        return 1;
-    } else if (n < 0) {
-        return 1 / pow(x, -n);
-    } else {
-        return x * pow(x, n - 1);
-    }
+/**
+ * возвращает дробную часть числа num
+ * @param {number} num - возводимое число в степень
+ * @return {number} - возвращает дробную часть
+ */
+export function getDecimal(num) {
+  let w = Math.abs(num - Math.floor(num));
+  return parseFloat (w.toFixed(2));
 }
 
-function sumTo(n) {
-    if (n === 1) {
-        return 1;
-    } else {
-        return n + sumTo(n - 1);
-    }
+/**
+ * возвращает строку str с заглавным первым символом
+ * @param {string} str - входная строка
+ * @return {string} - Строка с первой буквой, написанной с заглавной буквы
+ */
+
+export function ucFirst(str) {
+  if (!str) {
+    return str;
+  } else {
+    return str[0].toUpperCase() + str.slice(1);
+  }
 }
 
-function factorial(n) {
-    if (n === 0) {
-        return 1n;
-    } else {
-        return BigInt(n) * factorial(n - 1);
-    }
+/** 
+* возвращает true, если строка str содержит 'viagra' или 'XXX', а иначе false
+* @param {string} str - Строка для проверки.
+* @returns {boolean} - Возвращает true, если строка содержит слова "viagra" или "xxx", иначе - false.
+*/
+
+export function checkSpam(str) {
+  let lowerStr = str.toLowerCase();
+  
+  return lowerStr.includes('viagra') || lowerStr.includes('xxx');
 }
 
-function fib(n) {
-    let a = 0n;
-    let b = 1n;
+/**
+ * проверяет длину строки str, и если она превосходит maxlength – заменяет конец str на символ многоточие "…"
+  * @param {string} str - строка, которую нужно обрезать
+  * @param {number} maxlength - максимальная длина строки
+  * @return {string} - обрезанная строка или исходная строка, если ее длина не превышает максимальную
+ */
 
-    if (n === 0) {
-        return a;
-    } else if (n === 1) {
-        return b;
-    } else {
-        for (let i = 2; i <= n; i++) {
-            let c = a + b;
-            a = b;
-            b = c;
-        }
+export function truncate(str, maxlength) {
+  if (str.length > maxlength) {
+    return str.slice(0, maxlength - 1) + '…';
+  } else {
+    return str;
+  }
+}
 
-        return b;
-    }
+/**
+ * преобразует строку вида 'var-test-text' в 'varTestText'
+ * @param {string} str - Строка для преобразования
+ * @returns {string} - соединяет [var test text] в 'varTestText'
+ */
+
+export function camelize(str) {
+  let words = str.split('-');
+  
+  for (let i = 1; i < words.length; i++) {
+    words[i] = ucFirst(words[i]);
+  }
+  
+  return words.join('');
 }
-function compare(x) {
-    return function (y) {
-        if (y > x) {
-            return true;
-        } else if (y < x) {
-            return false;
-        } else {
-            return null;
-        }
-    }
+
+
+
+/**
+ * возвращает n-е число Фибоначчи
+ * @param {number} n - число Фибоначчи, до которого необходимо всё вычислить
+ * @return {array} - Массив, содержащий последовательность Фибоначчи с точностью до n
+ */
+
+import { fib } from './fibfunk.js';
+
+/**
+ * для натурального n возвращает массив, заполненный числами Фибоначчи до n-го (не включая его)
+ * @param {number} n -  число, до которого вычисляется массив из чисел Фибоначчи
+ * @returns {array} - массив из чисел Фибоначчи с точностью до заданного числа
+ */
+
+export function fibs(n) {
+  const arr = [];
+  for (let i = 0; i < n; i++) {
+    arr.push(fib(i));
+  }
+  return arr;
 }
-function sum(...args) {
-    return args.reduce((acc, curr) => acc + curr, 0);
+export function arrReverseSorted(arr) {
+  let sortedArr = arr.slice().sort((a, b) => b - a);
+  
+  return sortedArr;
+}
+export function unique(arr) {
+  let set = new Set(arr);
+  
+  return Array.from(set);
 }
