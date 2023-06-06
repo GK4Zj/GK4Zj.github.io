@@ -1,46 +1,60 @@
 "use strict";
-export function getDecimal(num) {
-  let w = Math.abs(num - Math.floor(num));
-  return parseFloat (w.toFixed(2));
+
+function pow(x, n) {
+    if (n === 0) {
+        return 1;
+    } else if (n < 0) {
+        return 1 / pow(x, -n);
+    } else {
+        return x * pow(x, n - 1);
+    }
 }
-export function ucFirst(str) {
-  if (!str) {
-    return str;
-  } else {
-    return str[0].toUpperCase() + str.slice(1);
-  }
+
+function sumTo(n) {
+    if (n === 1) {
+        return 1;
+    } else {
+        return n + sumTo(n - 1);
+    }
 }
-export function checkSpam(str) {
-  let lowerStr = str.toLowerCase();
-  return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+
+function factorial(n) {
+    if (n === 0) {
+        return 1n;
+    } else {
+        return BigInt(n) * factorial(n - 1);
+    }
 }
-export function truncate(str, maxlength) {
-  if (str.length > maxlength) {
-    return str.slice(0, maxlength - 1) + '…';
-  } else {
-    return str;
-  }
+
+function fib(n) {
+    let a = 0n;
+    let b = 1n;
+
+    if (n === 0) {
+        return a;
+    } else if (n === 1) {
+        return b;
+    } else {
+        for (let i = 2; i <= n; i++) {
+            let c = a + b;
+            a = b;
+            b = c;
+        }
+
+        return b;
+    }
 }
-export function camelize(str) {
-  let words = str.split('-');
-  for (let i = 1; i < words.length; i++) {
-    words[i] = ucFirst(words[i]);
-  }
-  return words.join('');
+function compare(x) {
+    return function (y) {
+        if (y > x) {
+            return true;
+        } else if (y < x) {
+            return false;
+        } else {
+            return null;
+        }
+    }
 }
-import { fib } from './fibfunk.js';
-export function fibs(n) {
-  const arr = [];
-  for (let i = 0; i < n; i++) {
-    arr.push(fib(i));
-  }
-  return arr;
-}
-export function arrReverseSorted(arr) {
-  let sortedArr = arr.slice().sort((a, b) => b - a);
-  return sortedArr;
-}
-export function unique(arr) {
-  let set = new Set(arr);
-  return Array.from(set);
+function sum(...args) {
+    return args.reduce((acc, curr) => acc + curr, 0);
 }
