@@ -192,10 +192,13 @@
         </tbody>
     </table>
     <script>
-        let table1 = document.body.children[0];
-        for (let j = 1; j < (table1.rows.length) - 1; j++) {
-            for (let i = 1 + j % 2; i < (table1.rows.length) - 1; i += 2) {
-                table1.rows[i].cells[j].style.backgroundColor = '#d18b47';
+        let table = document.body.firstElementChild; 
+
+        for (let i = 1; i < table.rows.length - 1; i++) {
+            let row = table.rows[i];
+            for (let j = 1; j < row.cells.length - 2; j += 2) {
+                row.cells[((i + 1) % 2) + j].style.backgroundColor = '#ffce9e';
+                row.cells[((i + 2) % 2) + j].style.backgroundColor = '#d18b47';
             }
         }
     </script>
