@@ -81,10 +81,7 @@ export function  fibs(n){
  */
 export function arrReverseSorted(arr) {
     let arr1 = Array.from(arr)
-    return arr1.sort(function (a, b) {
-        return b - a;
-        return arr;
-    });
+    return arr1.sort((a,b) -> b - a);
 }
 
 /**
