@@ -53,22 +53,23 @@ function pow(x, n) {
  */
 
   function fib(n) {
+    let a = 0n;
+    let b = 1n;
+
     if (n === 0) {
-      return BigInt(0);
+        return a;
     } else if (n === 1) {
-      return BigInt(1);
+        return b;
     } else {
-      let a = BigInt(0);
-      let b = BigInt(1);
-      let c;
-      for (let i = 2; i <= n; i++) {
-        c = a + b;
-        a = b;
-        b = c;
-      }
-      return c;
+        for (let i = 2; i <= n; i++) {
+            let c = a + b;
+            a = b;
+            b = c;
+        }
+
+        return b;
     }
-  }
+}
 
 /**
  * принимает целочисленное значение x и возвращает анонимную функцию
