@@ -35,7 +35,7 @@
             arrReverseSorted,
             unique
         } from './lab3.js';
-        
+
         describe("getDecimal", function () {
 
             it("getDecimal(1.23) => 0.23", function () {
@@ -80,7 +80,7 @@
 
         });
 
-        describe("truncate", function () {
+         describe("truncate", function () {
 
             it("truncate('Мама мыла раму.', 100) => 'Мама мыла раму.'", function () {
                 assert.strictEqual(truncate('Мама мыла раму.', 100), 'Мама мыла раму.');
@@ -92,7 +92,7 @@
 
         });
 
-        describe("camelize", function () {
+       describe("camelize", function () {
 
             it("camelize('var-test-text') => 'varTestText'", function () {
                 assert.strictEqual(camelize('var-test-text'), 'varTestText');
@@ -112,7 +112,7 @@
 
         });
 
-        describe("arrReverseSorted", function () {
+         describe("arrReverseSorted", function () {
 
             it("arrReverseSorted([1, 3, 2]) => [3, 2, 1]", function () {
                 assert.deepEqual(arrReverseSorted([1, 3, 2]), [3, 2, 1]);
@@ -120,7 +120,7 @@
 
         });
 
-        describe("unique", function () {
+       describe("unique", function () {
 
             it("unique([0, 1, 1, 2]) => [0, 1, 2]", function () {
                 assert.deepEqual(unique([0, 1, 1, 2]), [0, 1, 2]);
