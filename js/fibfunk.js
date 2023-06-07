@@ -1,11 +1,19 @@
-"use strict";
+"use strict;"
+export function fib(n) {
+    let a = 0n;
+    let b = 1n;
 
-import { fib } from './lab2_m.js'
+    if (n === 0) {
+        return a;
+    } else if (n === 1) {
+        return b;
+    } else {
+        for (let i = 2; i <= n; i++) {
+            let c = a + b;
+            a = b;
+            b = c;
+        }
 
-export function fibs(n) {
-  let fibArr = [];
-  for (let i = 0; i < n; i++) {
-    fibArr.push(fib(i));
-  }
-  return fibArr;
-} 
+        return b;
+    }
+}
