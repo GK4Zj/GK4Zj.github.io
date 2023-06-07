@@ -192,9 +192,9 @@
         </tbody>
     </table>
     <script>
-        var table1 = document.body.children[0];
-        for (var j = 1; j < (table1.rows.length) - 1; j++) {
-            for (var i = 1 + j % 2; i < (table1.rows.length) - 1; i += 2) {
+        let table1 = document.body.children[0];
+        for (let j = 1; j < (table1.rows.length) - 1; j++) {
+            for (let i = 1 + j % 2; i < (table1.rows.length) - 1; i += 2) {
                 table1.rows[i].cells[j].style.backgroundColor = '#d18b47';
             }
         }
