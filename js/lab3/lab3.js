@@ -74,7 +74,7 @@ export function camelize(str) {
  * @return {array} - Массив, содержащий последовательность Фибоначчи с точностью до n
  */
 
-import { fib } from './fibfunk.js';
+import { fib } from 'js/fibfunk.js';
 
 /**
  * для натурального n возвращает массив, заполненный числами Фибоначчи до n-го (не включая его)
