@@ -1,6 +1,6 @@
 "use strict";
 function vozrast_pol() {
-    let age,gender;
+    const age,gender;
 age = prompt('Сколько вам лет?');
 gender = prompt('Вы мужчина или женщина?');
 if ((age>=0 && age <= 17)&&(gender=='мужчина' || gender=='женщина')){
