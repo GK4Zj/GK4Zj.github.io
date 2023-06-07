@@ -13,7 +13,6 @@ export function fib(n) {
             a = b;
             b = c;
         }
-
         return b;
     }
 }
