@@ -1,52 +1,64 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
-<meta charset="UTF-8">
-<title> placeholder</title>
-<style>
-.placeholder::-webkit-input-placeholder {
-color: rgb(58, 85, 241);
-}
+    <meta charset="UTF-8">
+    <title> data-placeholder</title>
+    <style>
+        div {
+            color: rgb(58, 85, 241);
+        }
 
-div {
-color: rgb(58, 85, 241);
-}
+        .placeholder::-webkit-input-placeholder {
+            color: rgb(48, 62, 255);
+            font-family: Verdana;
+        }
 
-.data-placeholder{
-	color: rgb(58, 85, 241);
-}
-</style>
+
+        .data-placeholder {
+            color: rgb(58, 85, 241);
+        }
+    </style>
 </head>
 
 <body>
 
-<div id="texfield">
-        <label for="123"></label>
-        <input id="123" type="text" class="data-placeholder" data-placeholder="Текст" >
+    <div id="texfield">
+        <label for="123">23</label>
+        <input id="123" type="text" class="placeholder" data-placeholder="Введите текст">
     </div>
 
-<script>
-let input = document.querySelector('input[data-placeholder]');
-let div = document.querySelector('div');
-//Добавляем плейсхолдер
-input.value = input.getAttribute('data-placeholder');
+    <script>
+        'use strict';
+        let tf = document.getElementById("texfield");
 
-input.onfocus = function () {
-div.innerHTML = input.getAttribute('data-placeholder');
-input.setAttribute('data-placeholder', '');//при фокусировке на поле ввода, добавляется текст, указанный в атрибуте placeholder, внутрь div, а сам атрибут удаляется, чтобы текст внутри поля ввода и div совпадал
-input.value = '';
-};
+        let input = tf.getElementsByTagName("input")[0];
+        let lb = tf.getElementsByTagName("label")[0];
+        lb.style.display = "none";
 
-input.onblur = function () {
-input.setAttribute('data-placeholder', div.innerHTML);
-div.innerHTML = '';//При потере фокуса происходит обратная операция: текст из div переносится в атрибут placeholder input, а содержимое div очищается
-input.value = input.getAttribute('data-placeholder');
-};
+        input.setAttribute("placeholder", input.dataset.placeholder);
+        lb.innerHTML = input.dataset.placeholder;
 
-</script>
+        input.addEventListener("focus", function () {
+            lb.style.display = "block";
+            input.setAttribute("placeholder", "");
+        });
+
+        input.addEventListener("blur", function () {
+
+            lb.style.display = "none";
+            input.setAttribute("placeholder", input.dataset.placeholder);
+
+        });
+
+    </script>
 
 
 </body>
 
 </html>
+
+
+
+
