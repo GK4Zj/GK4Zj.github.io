@@ -1,8 +1,7 @@
 "use strict";
 function vozrast_pol() {
-    const age,gender;
-age = prompt('Сколько вам лет?');
-gender = prompt('Вы мужчина или женщина?');
+const age = prompt('Сколько вам лет?');
+const gender = prompt('Вы мужчина или женщина?');
 if ((age>=0 && age <= 17)&&(gender=='мужчина' || gender=='женщина')){
     alert('Вам работать ещё рано — учитесь!');
 }  else if ((age>=18 && age <= 59) && gender=='мужчина'){
